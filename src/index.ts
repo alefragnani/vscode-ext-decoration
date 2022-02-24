@@ -3,14 +3,14 @@
 *  Licensed under the MIT License. See License.md in the project root for license information.
 *--------------------------------------------------------------------------------------------*/
 
-import { TextEditorDecorationType, window, DecorationRenderOptions, OverviewRulerLane, ThemeColor } from "vscode";
+import { TextEditorDecorationType, window, DecorationRenderOptions, OverviewRulerLane, ThemeColor, Uri } from "vscode";
 
 function createLineDecoration(
     lineBackground: string | ThemeColor,
     lineBorder?: string | ThemeColor,
     overviewRulerLane?: OverviewRulerLane,
     overviewRulerColor?: string | ThemeColor,
-    gutterIconPath?: string): TextEditorDecorationType {
+    gutterIconPath?: string | Uri): TextEditorDecorationType {
 
     const decorationOptions: DecorationRenderOptions = {
         gutterIconPath,
